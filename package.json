@@ -12,6 +12,7 @@
     "seed": "chec-seed seeds"
   },
   "dependencies": {
+    "@amplitude/analytics-browser": "^1.9.3",
     "@chec/commerce.js": "^2.8.0",
     "@stripe/react-stripe-js": "^1.4.1",
     "@stripe/stripe-js": "^1.13.0",

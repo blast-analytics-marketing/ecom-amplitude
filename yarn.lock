@@ -2,6 +2,72 @@
 # yarn lockfile v1
 
 
+"@amplitude/analytics-browser@^1.9.3":
+  "integrity" "sha512-UVk6i8wCyu0FroOs0SGWimTS98ZiYNxKK3P5ic/FMM0A9IAkJK8eqnPOOCGVr4GvIupqhSfCEl8bzofIA4H5sQ=="
+  "resolved" "https://registry.npmjs.org/@amplitude/analytics-browser/-/analytics-browser-1.9.3.tgz"
+  "version" "1.9.3"
+  dependencies:
+    "@amplitude/analytics-client-common" "^0.6.2"
+    "@amplitude/analytics-core" "^0.12.1"
+    "@amplitude/analytics-types" "^0.17.1"
+    "@amplitude/plugin-page-view-tracking-browser" "^0.6.3"
+    "@amplitude/plugin-web-attribution-browser" "^0.6.3"
+    "@amplitude/ua-parser-js" "^0.7.31"
+    "tslib" "^2.4.1"
+
+"@amplitude/analytics-client-common@^0.6.2":
+  "integrity" "sha512-Td6CnAWizjSFxSteo2q1X19LgBTqUgAhJc7ek+vzAi+o4Xl7RaKcbq3bB5QNztA4y5hFmH0OJ93Lfen65N/3Jw=="
+  "resolved" "https://registry.npmjs.org/@amplitude/analytics-client-common/-/analytics-client-common-0.6.2.tgz"
+  "version" "0.6.2"
+  dependencies:
+    "@amplitude/analytics-connector" "^1.4.5"
+    "@amplitude/analytics-core" "^0.12.1"
+    "@amplitude/analytics-types" "^0.17.1"
+    "tslib" "^2.4.1"
+
+"@amplitude/analytics-connector@^1.4.5":
+  "integrity" "sha512-6jD2pOosRD4y8DT8StUCz7yTd5ZDkdOU9/AWnlWKM5qk90Mz7sdZrdZ9H7sA/L3yOJEpQOYZgQplQdWWUzyWug=="
+  "resolved" "https://registry.npmjs.org/@amplitude/analytics-connector/-/analytics-connector-1.4.6.tgz"
+  "version" "1.4.6"
+  dependencies:
+    "@amplitude/ua-parser-js" "0.7.31"
+
+"@amplitude/analytics-core@^0.12.1":
+  "integrity" "sha512-ATaXV6oJVsoqxYiyHTmBmgwauDwj0DjZ4HAR5jtw6bMU+OI8QTo+acnoLT/2Q9sw9gfl84fuKd8NBV7NuOsQ+Q=="
+  "resolved" "https://registry.npmjs.org/@amplitude/analytics-core/-/analytics-core-0.12.1.tgz"
+  "version" "0.12.1"
+  dependencies:
+    "@amplitude/analytics-types" "^0.17.1"
+    "tslib" "^2.4.1"
+
+"@amplitude/analytics-types@^0.17.1":
+  "integrity" "sha512-5DrnjWbbG50v1KuRG90g05yEAd80OngxwyjG8ejMVY2/lXmPjwH3xCBrHRnXlnwpaMHKh/RGEtvM5+JAYZ39rA=="
+  "resolved" "https://registry.npmjs.org/@amplitude/analytics-types/-/analytics-types-0.17.1.tgz"
+  "version" "0.17.1"
+
+"@amplitude/plugin-page-view-tracking-browser@^0.6.3":
+  "integrity" "sha512-c7vfoNYb7JFga6NvKuf1OAcwHfaXXQm80YX2QkrjyOROd+yt8/kY6tYgaNAcD4PZD8bWkVc2UjIxRYGmmfwuEw=="
+  "resolved" "https://registry.npmjs.org/@amplitude/plugin-page-view-tracking-browser/-/plugin-page-view-tracking-browser-0.6.3.tgz"
+  "version" "0.6.3"
+  dependencies:
+    "@amplitude/analytics-client-common" "^0.6.2"
+    "@amplitude/analytics-types" "^0.17.1"
+    "tslib" "^2.4.1"
+
+"@amplitude/plugin-web-attribution-browser@^0.6.3":
+  "integrity" "sha512-csH0LOpBut3OQDUmt952Maw9+HWyy2dmDPiWXnYQemClP+ZEQ0kSTM8asNqVyPdAsEmSp0JMFIDS5tuQJeKOnQ=="
+  "resolved" "https://registry.npmjs.org/@amplitude/plugin-web-attribution-browser/-/plugin-web-attribution-browser-0.6.3.tgz"
+  "version" "0.6.3"
+  dependencies:
+    "@amplitude/analytics-client-common" "^0.6.2"
+    "@amplitude/analytics-types" "^0.17.1"
+    "tslib" "^2.4.1"
+
+"@amplitude/ua-parser-js@^0.7.31", "@amplitude/ua-parser-js@0.7.31":
+  "integrity" "sha512-+z8UGRaj13Pt5NDzOnkTBy49HE2CX64jeL0ArB86HAtilpnfkPB7oqkigN7Lf2LxscMg4QhFD7mmCfedh3rqTg=="
+  "resolved" "https://registry.npmjs.org/@amplitude/ua-parser-js/-/ua-parser-js-0.7.31.tgz"
+  "version" "0.7.31"
+
 "@ampproject/remapping@^2.1.0":
   "integrity" "sha512-hoyByceqwKirw7w3Z7gnIIZC3Wx3J484Y3L/cMpXFbr7d9ZQj2mODrirNzcJa+SM3UlpWXYvKV4RlRpFXlWgXg=="
   "resolved" "https://registry.npmjs.org/@ampproject/remapping/-/remapping-2.1.2.tgz"
@@ -3848,6 +3914,11 @@
   "integrity" "sha512-tTSkux6IGPnUGUd1XAZHcpu85MOkIl5zX49pO+jfsie3eP0B6pyhOlLXm3cAC6T7s+euSDDUUV+Acop5WmtkVg=="
   "resolved" "https://registry.npmjs.org/tslib/-/tslib-1.11.2.tgz"
   "version" "1.11.2"
+
+"tslib@^2.4.1":
+  "integrity" "sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg=="
+  "resolved" "https://registry.npmjs.org/tslib/-/tslib-2.5.0.tgz"
+  "version" "2.5.0"
 
 "tsutils@^3.21.0":
   "integrity" "sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA=="
