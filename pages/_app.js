@@ -10,7 +10,7 @@ import 'swiper/components/effect-fade/effect-fade.scss';
 import { useRouter } from 'next/router'
 import { route } from 'next/dist/server/router';
 import { virtualPageView } from '../store/actions/analyticsActions';
-import { init } from "@amplitude/analytics-browser";
+import { init } from '@amplitude/analytics-browser';
 
 const MyApp = ({Component, pageProps}) => {
 
