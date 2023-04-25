@@ -10,12 +10,18 @@ import 'swiper/components/effect-fade/effect-fade.scss';
 import { useRouter } from 'next/router'
 import { route } from 'next/dist/server/router';
 import { virtualPageView } from '../store/actions/analyticsActions';
+import { init } from "@amplitude/analytics-browser";
 
 const MyApp = ({Component, pageProps}) => {
 
   const store = useStore(pageProps.initialState);
   const [stripePromise, setStripePromise] = useState(null);
   const router = useRouter()
+
+  useEffect(() => {
+    //Initialize Amplitude
+    init(process.env.NEXT_PUBLIC_AMP_API_KEY)
+  }, [])
 
   useEffect(() => {
     // view order page data layer is built using the router.pathname
