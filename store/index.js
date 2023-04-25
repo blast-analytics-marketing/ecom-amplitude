@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import { createStore, applyMiddleware, compose } from 'redux';
 import { HYDRATE } from 'next-redux-wrapper';
 import thunk from 'redux-thunk';
+import { track, Identify, identify } from "@amplitude/analytics-browser";
 
 import {
   STORE_PRODUCTS,
@@ -130,20 +131,12 @@ const devtools = (process.browser && window.__REDUX_DEVTOOLS_EXTENSION__)
 
 //Analytics middleware for GTM
 const analyticsMiddleware = () => next => action => {
-  const sendEvents = (...events) => {
-    const dataLayer = window.dataLayer || [];
-    dataLayer.push(...events);
-    window.dataLayer = dataLayer;
-    const eventName = events[0].event;
-    const event = new Event(eventName);
-    document.dispatchEvent(event);
-  };
   
   const { type, payload } = action;
 
   switch(type) {
     case "VIRTUAL_PAGE_VIEW":
-      rudderanalytics.page(payload.name,payload.properties)
+      track(payload.name,payload.properties)
       break;
     case "TRACK_VIEW_ITEM_LIST":
     case "TRACK_SELECT_ITEM":
@@ -158,11 +151,13 @@ const analyticsMiddleware = () => next => action => {
     // case "TRACK_SELECT_PROMOTION":
     case "TRACK_NAVIGATION_CLICK":
     case "TRACK_LOGIN":
-      rudderanalytics.track(payload.event,payload.properties)
+      track(payload.event,payload.properties)
       break;
     case "SET_CUSTOMER":
       console.log(payload)
-      rudderanalytics.identify(payload.email)
+      const event = new Identify();
+      event.set("email", payload.email);
+      identify(event)
       break;
     case "CLEAR_CUSTOMER":
       break;
